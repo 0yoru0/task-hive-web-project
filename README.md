@@ -1,7 +1,6 @@
 # mini-projet-web-task-hive-
 link for the prototype video:</br>
 https://drive.google.com/file/d/12bBL1Gotitg630Qibr4bPniI3r3f9Jd4/view?usp=share_link
-
 </br>
 </br>
 </br>
