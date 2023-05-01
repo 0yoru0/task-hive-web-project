@@ -1,0 +1,32 @@
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{name}}
+            </mat-panel-title>
+            <mat-panel-description>
+                Deadline: {{deadline}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="container">
+            <div>
+                <mat-chip-listbox aria-label="Fish selection">
+                    <mat-chip-option color="warn">In proggress</mat-chip-option>
+                    <mat-chip-option color="accent">Needs revision</mat-chip-option>
+                    <mat-chip-option color="primary" selected>Done</mat-chip-option>
+                </mat-chip-listbox>
+            </div>
+            <div>
+                <button mat-button [matMenuTriggerFor]="menu"><mat-icon>reorder</mat-icon></button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="delete(id)"><mat-icon>delete</mat-icon>Delete</button>
+                    <button mat-menu-item (click)="edit(data)"><mat-icon>edit</mat-icon>Edit</button>
+                </mat-menu>
+            </div>
+        </div>
+        <br>
+        <h4>Description:</h4>
+        <p> {{desc}}</p>
+        <img src="{{url}}" alt="tt">
+    </mat-expansion-panel>
+</mat-accordion>

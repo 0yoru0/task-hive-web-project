@@ -1,0 +1,24 @@
+<div class="py-3"><div class="card text-white card-has-bg click-col"
+    style="background-image:url('{{url}}');">
+    <img class="card-img d-none"
+      src={{url}}
+      alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+    <div class="card-img-overlay d-flex flex-column">
+      <div class="card-body">
+        <small class="card-meta mb-2">Task</small>
+        <h4 class="card-title mt-0 "><a class="text-white" herf="#">{{name}}</a></h4>
+        <small><i class="far fa-clock"></i> Deadline: {{deadline}}</small>
+        <h4>Description:</h4>
+        <p> {{desc}}</p>
+      </div>
+      <div class="card-footer">
+        <div>
+          <button mat-button [matMenuTriggerFor]="menu" color="warning"><mat-icon>reorder</mat-icon></button>
+          <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="delete(id)"><mat-icon>delete</mat-icon>Delete</button>
+              <button mat-menu-item (click)="edit(data)"><mat-icon>edit</mat-icon>Edit</button>
+          </mat-menu>
+      </div>
+      </div>
+    </div>
+  </div></div>

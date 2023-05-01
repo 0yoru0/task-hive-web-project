@@ -1,0 +1,50 @@
+<h1 mat-dialog-title><h1 class="waviy">
+  <span style="--i:1">P</span>
+  <span style="--i:2">R</span>
+  <span style="--i:3">O</span>
+  <span style="--i:4">J</span>
+  <span style="--i:5">E</span>
+  <span style="--i:6">C</span>
+  <span style="--i:7">T</span>
+  <span style="--i:8"> </span>
+  <span style="--i:9">D</span>
+  <span style="--i:10">E</span>
+  <span style="--i:11">T</span>
+  <span style="--i:12">A</span>
+  <span style="--i:13">I</span>
+  <span style="--i:14">L</span>
+  <span style="--i:15">S</span>
+ </h1></h1>
+<form  [formGroup]="tform" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+      
+        <div class="row">
+            <mat-form-field appearance="outline" >
+                <mat-label>Projec Name</mat-label>
+                <input matInput placeholder="Ex. Web App" formControlName="Np" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline" >
+                <mat-label>Projec Description</mat-label>
+                <input matInput placeholder="Ex. Web App" formControlName="desc" required>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" >
+                <mat-label>Type</mat-label>
+                <mat-select formControlName="type" required>
+                  <mat-option value="1" aria-selected="true">
+                    Pro
+                  </mat-option>
+                  <mat-option value="2">
+                    Persenal
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+
+    </div>
+    <div mat-dialog-actions class="action tt" >
+        <div class=""><button mat-raised-button type="button" [mat-dialog-close]="false">cencel</button></div>
+        <div class=""><button mat-raised-button  type="submit" [ngStyle]="{'background-color': 'orange'}">save</button></div>
+    </div>
+</form>

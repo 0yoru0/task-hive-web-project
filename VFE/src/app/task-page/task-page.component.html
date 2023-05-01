@@ -1,0 +1,44 @@
+<body>
+<app-nav ></app-nav>
+<h4 class="retroshadow">{{np}}</h4>
+<div class="d-flex justify-content-around">
+  <div>
+    <h1>
+      <h1 class="underline text-success">DONE</h1>
+    </h1>
+    <app-tcard *ngFor="let i of done" name="{{i.Nt}}" desc="{{i.Desc}}"
+    deadline="{{i.Deadline}}" id="{{i.idp}}" data="{{i}}" State="{{i.State}}"
+    url='{{i.URL}}' idt="{{i.idt}}"></app-tcard>
+
+  </div>
+  <div>
+    <h1>
+      <h1 class="underline">IN PROGRESS</h1>
+    </h1>
+    <app-tcard *ngFor="let i of in" name="{{i.Nt}}" desc="{{i.Desc}}"
+    deadline="{{i.Deadline}}" id="{{i.idp}}" data="{{i}}" State="{{i.State}}"
+    url='{{i.URL}}' idt="{{i.idt}}"></app-tcard>
+  </div>
+  <div>
+    <h1>
+      <h1 class="underline text-danger">NEED REVISION</h1>
+    </h1>
+    <app-tcard *ngFor="let i of nr" name="{{i.Nt}}" desc="{{i.Desc}}"
+    deadline="{{i.Deadline}}" id="{{i.idp}}" data="{{i}}" State="{{i.State}}"
+    url='{{i.URL}}' idt="{{i.idt}}"></app-tcard>
+  </div>
+</div>
+
+<button mat-fab class="fab-button" color="primary" (click)="openD()"
+  [ngStyle]="{'background-color': 'orange'}">
+  <mat-icon>+</mat-icon>
+</button>
+<span></span>
+<br>
+<br> <br>
+<footer>
+  <app-footer></app-footer>
+</footer>
+  
+
+</body>

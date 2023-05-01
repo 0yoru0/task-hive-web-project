@@ -1,0 +1,61 @@
+<h1 mat-dialog-title><h1 class="waviy">
+    <span style="--i:1">T</span>
+    <span style="--i:2">A</span>
+    <span style="--i:3">S</span>
+    <span style="--i:4">K</span>
+    <span style="--i:8"> </span>
+    <span style="--i:9">D</span>
+    <span style="--i:10">E</span>
+    <span style="--i:11">T</span>
+    <span style="--i:12">A</span>
+    <span style="--i:13">I</span>
+    <span style="--i:14">L</span>
+    <span style="--i:15">S</span>
+   </h1></h1>
+<form [formGroup]="tform" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+        <div class="row">
+            <mat-form-field appearance="outline" >
+                <mat-label>Task Name</mat-label>
+                <input matInput placeholder="Ex. Web App" formControlName="Nt" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline" >
+                <mat-label>State</mat-label>
+                <mat-select formControlName="State" required>
+                  <mat-option value="1">
+                    Done
+                  </mat-option>
+                  <mat-option value="2">
+                    In Progress
+                  </mat-option>
+                  <mat-option value="3">
+                    In Revestion
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" >
+                <mat-label>Description</mat-label>
+                <input matInput placeholder="Ex. Hello" formControlName="Desc" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline" >
+                <mat-label>DeadLine</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="Deadline" required>
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" >
+                <mat-label>Image URL</mat-label>
+                <input matInput placeholder="Ex. Hello" formControlName="URL" required>
+            </mat-form-field> 
+        </div>
+    </div>
+    <div mat-dialog-actions class="action tt">
+        <div class=""><button mat-raised-button type="button" [mat-dialog-close]="false">cencel</button></div>
+        <div class=""><button mat-raised-button color="primary" type="submit" [ngStyle]="{'background-color': 'orange'}">save</button></div>
+    </div>
+</form>

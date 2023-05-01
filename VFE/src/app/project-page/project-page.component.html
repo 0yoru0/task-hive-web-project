@@ -1,0 +1,47 @@
+<body>
+  
+
+<app-nav></app-nav>
+<div class="row" style="margin-left: 358px;">
+  <section>
+    <div class="content">
+      <h2>Professional Projects</h2>
+      <h2>Professional Projects</h2>
+    </div>
+  </section>
+  <br>
+</div>
+<div class="rap">
+
+    <app-pcard *ngFor="let i of pro" idProject="{{i.idProject}}" desc="{{i.desc}}"
+    Np="{{i.Np}}" type="{{i.type}}" (click)="gotask(i.idProject)"></app-pcard>
+    
+</div>
+<br>
+<br>
+<br>
+<div class="row" style="margin-left: 310px;">
+  <section>
+    <div class="content">
+      <h2>Personal Projects</h2>
+      <h2>Personal Projects</h2>
+    </div>
+  </section>
+  <br>
+</div>
+<div class="rap">
+  <app-pcard *ngFor="let i of per" idProject="{{i.idProject}}" desc="{{i.desc}}"
+    Np="{{i.Np}}" type="{{i.type}}"  (click)="gotask(i.idProject)"></app-pcard>
+
+</div>
+<button mat-fab class="fab-button" color="primary" (click)="openD()"
+  [ngStyle]="{'background-color': 'orange'}">
+  <mat-icon>+</mat-icon>
+</button>
+<br>
+<br> <br>
+
+
+  <app-footer></app-footer>
+
+</body>

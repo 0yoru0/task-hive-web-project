@@ -1,0 +1,27 @@
+.list{
+    padding-top: 10px;
+    flex:auto;
+    width: 60%;
+    margin: 0 auto;
+    
+}
+.pname{
+    padding-top: 20px;
+    text-align: center;
+}
+.space{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+}
+.fab-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  .example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+  
